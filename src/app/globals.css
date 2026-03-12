@@ -1,19 +1,21 @@
-@import "tailwindcss";
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
 
 :root {
-  --background: oklch(0.985 0.006 85);
-  --panel: oklch(0.97 0.01 85);
-  --panel-strong: oklch(0.94 0.018 85);
-  --foreground: oklch(0.28 0.03 250);
-  --muted: oklch(0.56 0.02 250);
-  --line: oklch(0.88 0.01 85);
-  --brand: oklch(0.62 0.13 225);
-  --brand-strong: oklch(0.54 0.15 225);
-  --user-bubble: oklch(0.93 0.035 227);
-  --assistant-bubble: oklch(0.995 0.003 90);
+  --background: oklch(0.972 0.008 85);
+  --panel: oklch(0.948 0.012 85);
+  --panel-strong: oklch(0.916 0.018 85);
+  --foreground: oklch(0.25 0.028 248);
+  --muted: oklch(0.5 0.02 248);
+  --line: oklch(0.86 0.012 85);
+  --brand: oklch(0.59 0.12 230);
+  --brand-strong: oklch(0.51 0.14 230);
+  --user-bubble: oklch(0.9 0.04 228);
+  --assistant-bubble: oklch(0.985 0.005 84);
   --warn: oklch(0.72 0.14 72);
   --danger: oklch(0.63 0.19 24);
-  --shadow-soft: 0 18px 40px rgba(49, 66, 94, 0.08);
+  --shadow-soft: 0 18px 40px rgba(31, 45, 72, 0.08);
   --radius-xl: 1.5rem;
   --radius-lg: 1rem;
   --radius-md: 0.75rem;
@@ -28,8 +30,8 @@
 html {
   color: var(--foreground);
   background:
-    radial-gradient(circle at top left, rgba(111, 168, 255, 0.18), transparent 34%),
-    radial-gradient(circle at right 20%, rgba(244, 203, 118, 0.12), transparent 26%),
+    radial-gradient(circle at top left, rgba(97, 144, 228, 0.15), transparent 34%),
+    radial-gradient(circle at right 18%, rgba(221, 188, 118, 0.1), transparent 24%),
     var(--background);
 }
 
@@ -48,7 +50,7 @@ textarea {
 .page-shell {
   min-height: 100vh;
   background:
-    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(246, 247, 243, 0.92)),
+    linear-gradient(135deg, rgba(255, 255, 255, 0.78), rgba(243, 242, 236, 0.94)),
     var(--background);
 }
 

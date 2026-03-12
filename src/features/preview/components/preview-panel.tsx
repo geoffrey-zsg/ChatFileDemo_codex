@@ -191,7 +191,7 @@ export function PreviewPanel({
                       </Button>
                     ) : null}
                   </div>
-                  <div className="space-y-4 text-sm leading-7 text-[color-mix(in_oklab,var(--foreground)_90%,var(--muted))]">
+                  <div className="space-y-4 text-sm leading-8 text-[color-mix(in_oklab,var(--foreground)_84%,var(--muted))]">
                     {section.body.map((paragraph) => (
                       <p key={paragraph}>{paragraph}</p>
                     ))}

@@ -37,7 +37,7 @@ export function ChatMessage({ message, onCitationClick, onFeedback, onCopy }: Ch
           isNoResult && "border-[color-mix(in_oklab,var(--warn)_38%,var(--line))] bg-[color-mix(in_oklab,var(--panel)_90%,#fff8ea)]",
         )}
       >
-        <div className={cn("space-y-3 text-sm leading-7", message.status === "streaming" && "cursor-dot")}>
+        <div className={cn("space-y-3 text-sm leading-7 text-[color-mix(in_oklab,var(--foreground)_92%,var(--muted))]", message.status === "streaming" && "cursor-dot")}>
           <p className="whitespace-pre-wrap">{message.content}</p>
 
           {isNoResult ? (

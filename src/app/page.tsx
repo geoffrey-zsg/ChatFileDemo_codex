@@ -392,14 +392,14 @@ export default function HomePage() {
                 <div className="mb-4 flex items-center justify-between border-b border-[var(--line)] pb-4">
                   <div>
                     <p className="text-xs uppercase tracking-[0.22em] text-[var(--muted)]">Assistant</p>
-                    <h1 className="font-[var(--font-display)] text-4xl">上传即问，回答带引用</h1>
+                    <h1 className="font-[var(--font-display)] text-4xl tracking-[-0.03em]">上传即问，回答带引用</h1>
                   </div>
                   <Button variant="secondary" onClick={handleReplaceDocument}>
                     更换文档
                   </Button>
                 </div>
 
-                <div className="space-y-4 overflow-y-auto pb-2">
+                <div className="space-y-4 overflow-y-auto pb-2 pr-1">
                   {welcomeVisible ? (
                     <Card className="bg-[color-mix(in_oklab,var(--panel)_78%,white)] p-6">
                       <div className="flex items-start gap-4">
