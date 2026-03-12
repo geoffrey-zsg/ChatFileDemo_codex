@@ -1,13 +1,9 @@
 # ChatFileDemo_codex
 
-项目初始化完成。
+## 项目说明
+
+这是一个新建的项目。
 
 ## 开始使用
 
-```bash
-# 安装依赖
-npm install
-
-# 启动开发服务器
-npm run dev
-```
+待补充...
