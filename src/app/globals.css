@@ -1,0 +1,100 @@
+@import "tailwindcss";
+
+:root {
+  --background: oklch(0.985 0.006 85);
+  --panel: oklch(0.97 0.01 85);
+  --panel-strong: oklch(0.94 0.018 85);
+  --foreground: oklch(0.28 0.03 250);
+  --muted: oklch(0.56 0.02 250);
+  --line: oklch(0.88 0.01 85);
+  --brand: oklch(0.62 0.13 225);
+  --brand-strong: oklch(0.54 0.15 225);
+  --user-bubble: oklch(0.93 0.035 227);
+  --assistant-bubble: oklch(0.995 0.003 90);
+  --warn: oklch(0.72 0.14 72);
+  --danger: oklch(0.63 0.19 24);
+  --shadow-soft: 0 18px 40px rgba(49, 66, 94, 0.08);
+  --radius-xl: 1.5rem;
+  --radius-lg: 1rem;
+  --radius-md: 0.75rem;
+  --font-body: "Manrope", "Segoe UI Variable Text", sans-serif;
+  --font-display: "Newsreader", Georgia, serif;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+html {
+  color: var(--foreground);
+  background:
+    radial-gradient(circle at top left, rgba(111, 168, 255, 0.18), transparent 34%),
+    radial-gradient(circle at right 20%, rgba(244, 203, 118, 0.12), transparent 26%),
+    var(--background);
+}
+
+body {
+  margin: 0;
+  min-height: 100vh;
+  font-family: var(--font-body);
+}
+
+button,
+input,
+textarea {
+  font: inherit;
+}
+
+.page-shell {
+  min-height: 100vh;
+  background:
+    linear-gradient(135deg, rgba(255, 255, 255, 0.82), rgba(246, 247, 243, 0.92)),
+    var(--background);
+}
+
+.grain {
+  position: relative;
+}
+
+.grain::before {
+  content: "";
+  position: absolute;
+  inset: 0;
+  pointer-events: none;
+  opacity: 0.18;
+  background-image:
+    linear-gradient(rgba(35, 50, 80, 0.04) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(35, 50, 80, 0.04) 1px, transparent 1px);
+  background-size: 18px 18px;
+  mask-image: linear-gradient(to bottom, black, transparent 90%);
+}
+
+.highlight-pulse {
+  animation: pulse-highlight 1.8s ease-out 3;
+}
+
+@keyframes pulse-highlight {
+  0%,
+  100% {
+    transform: scale(1);
+    opacity: 0.85;
+  }
+
+  50% {
+    transform: scale(1.01);
+    opacity: 1;
+  }
+}
+
+.cursor-dot::after {
+  content: "▍";
+  display: inline-block;
+  margin-left: 2px;
+  animation: cursor-blink 0.8s step-end infinite;
+}
+
+@keyframes cursor-blink {
+  50% {
+    opacity: 0;
+  }
+}
